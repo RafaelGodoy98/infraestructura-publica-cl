@@ -1,0 +1,24 @@
+# --- Entorno de Python ---
+# Librerías instaladas por uv; se regeneran con un comando
+.venv/
+__pycache__/
+*.pyc
+
+# --- Secretos ---
+# Credenciales reales (API Banco Central, GCP). NUNCA al repo.
+.env
+
+# --- Datos ---
+# Se regeneran con el pipeline; además pesan mucho
+data/
+
+# --- Cachés de herramientas ---
+.pytest_cache/
+.ruff_cache/
+
+# --- Notebooks ---
+.ipynb_checkpoints/
+
+# --- Sistema y editor ---
+.DS_Store
+Thumbs.db
