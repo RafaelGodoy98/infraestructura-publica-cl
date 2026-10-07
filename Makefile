@@ -2,6 +2,7 @@
 
 setup:
 	uv sync --locked
+	uv run pre-commit install
 
 test:
 	uv run pytest

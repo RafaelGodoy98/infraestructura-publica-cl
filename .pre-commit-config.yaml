@@ -1,0 +1,17 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace      # borra espacios al final de línea
+      - id: end-of-file-fixer        # asegura el salto de línea final
+      - id: check-yaml               # valida sintaxis de archivos .yaml
+      - id: check-toml               # valida sintaxis de pyproject.toml
+      - id: check-added-large-files  # bloquea archivos > 500 KB
+      - id: detect-private-key       # bloquea claves privadas
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.16.10
+    hooks:
+      - id: ruff-check
+        args: [--fix]
+      - id: ruff-format
