@@ -14,3 +14,11 @@ lint:
 format:
 	uv run ruff format .
 	uv run ruff check --fix .
+
+.PHONY: setup test lint format docker-build docker-test
+
+docker-build:
+	docker build -t infraestructura-publica-cl .
+
+docker-test: docker-build
+	docker run --rm infraestructura-publica-cl
