@@ -34,6 +34,7 @@ Los datos **no están en este repositorio**: se generan ejecutando el pipeline. 
 - Linux o WSL2 (Windows)
 - [uv](https://docs.astral.sh/uv/getting-started/installation/): `curl -LsSf https://astral.sh/uv/install.sh | sh`
 - make: `sudo apt install make`
+- - [Docker](https://docs.docker.com/get-docker/) (opcional, para `make docker-test`)
 
 uv instala automáticamente la versión de Python requerida (3.13).
 
@@ -46,6 +47,7 @@ make setup   # instala dependencias exactas (uv.lock) y activa pre-commit
 make test    # corre los tests
 make lint    # verifica estilo y errores, sin modificar archivos
 make format  # corrige formato automáticamente
+make docker-test # construye la imagen y corre los tests en un contenedor aislado (requiere Docker)
 ```
 
 ## Estructura del repositorio
