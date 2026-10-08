@@ -1,4 +1,4 @@
-.PHONY: setup test lint format
+.PHONY: setup test lint format docker-build docker-test
 
 setup:
 	uv sync --locked
@@ -14,8 +14,6 @@ lint:
 format:
 	uv run ruff format .
 	uv run ruff check --fix .
-
-.PHONY: setup test lint format docker-build docker-test
 
 docker-build:
 	docker build -t infraestructura-publica-cl .
